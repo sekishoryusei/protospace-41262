@@ -20,7 +20,7 @@
         <div class="prototype__detail">
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%=  @prototype.catch_copy %>
+            <%= @prototype.catch_copy %>
           </p>
         </div>
         <div class="prototype__detail">
@@ -47,7 +47,7 @@
           <% @prototype.comments.each do |comment| %>
           <li class="comments_list">
             <%= comment.content %>  
-            <%= link_to "( #{comment.user.name} )", user_path(@prototype.user.id), class: :comment_user %>
+            <%= link_to "( #{comment.user.name} )", user_path(comment.user.id), class: :comment_user %>
           </li> 
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
